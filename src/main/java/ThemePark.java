@@ -8,10 +8,12 @@ public class ThemePark {
 
     private ArrayList<Attraction> attractions;
     private ArrayList<Stall> stalls;
+    private ArrayList<IReviewed> reviewed;
 
     public ThemePark(){
         this.attractions = new ArrayList<Attraction>();
         this.stalls = new ArrayList<Stall>();
+        this.reviewed = new ArrayList<IReviewed>();
     }
 
     public int getAttractionsCount() {
@@ -30,16 +32,16 @@ public class ThemePark {
         this.stalls.add(stall);
     }
 
-//    public ArrayList<IReviewed> getAllReviewed(ArrayList<Attraction> attractions, ArrayList<Stall> stalls){
-//        ArrayList<IReviewed> reviewed = new ArrayList<IReviewed>();
-//        for(Attraction attraction : attractions){
-//            reviewed.add(attraction);
-//        }
-//        for(Stall stall : stalls){
-//            reviewed.add(stall);
-//
-//        }
-//        return reviewed;
-//
-//    }
+    public int getReviewedCount() {
+        return this.reviewed.size();
+    }
+
+    public void addToReviewed(IReviewed item){
+        this.reviewed.add(item);
+    }
+
+    public ArrayList<IReviewed> getAllReviewed(){
+        return reviewed;
+
+    }
 }

@@ -51,4 +51,17 @@ public class ThemeParkTest {
         themePark.addStall(iceCreamStall);
         assertEquals(2, themePark.getStallsCount());
     }
+
+    @Test
+    public void canGetAllReviewed(){
+        themePark.addToReviewed(dodgems);
+        themePark.addToReviewed(park);
+        themePark.addToReviewed(playground);
+        themePark.addToReviewed(rollerCoaster);
+        themePark.addToReviewed(candyflossStall);
+        themePark.addToReviewed(iceCreamStall);
+        themePark.addToReviewed(tobaccoStall);
+        assertEquals(7, themePark.getReviewedCount());
+
+    }
 }
