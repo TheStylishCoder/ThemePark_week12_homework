@@ -1,5 +1,7 @@
 package stalls;
 
+import behaviours.IReviewed;
+
 public abstract class Stall {
 
     private String name;
@@ -10,6 +12,7 @@ public abstract class Stall {
         this.name = name;
         this.ownerName = ownerName;
         this.parkingSpot = parkingSpot;
+
     }
 
     public String getName() {
@@ -23,4 +26,7 @@ public abstract class Stall {
     public ParkingSpot getParkingSpot() {
         return parkingSpot;
     }
+
+
+
 }
