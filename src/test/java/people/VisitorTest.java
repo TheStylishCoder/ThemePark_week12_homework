@@ -1,5 +1,6 @@
 package people;
 
+import attractions.Park;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,10 +9,12 @@ import static org.junit.Assert.assertEquals;
 public class VisitorTest {
 
     Visitor visitor;
+    Park park;
 
     @Before
     public void before(){
         visitor = new Visitor(14, 1.2, 40.0);
+        park = new Park("Leafy Meadows", 9);
     }
 
     @Test
@@ -27,5 +30,16 @@ public class VisitorTest {
     @Test
     public void hasMoney() {
         assertEquals(40.0, visitor.getMoney(), 0.1);
+    }
+
+    @Test
+    public void visitedAttractionsStartsEmpty(){
+        assertEquals(0, visitor.getVisitedAttractionsCount());
+    }
+
+    @Test
+    public void canAddToVisitedAttractions(){
+        visitor.addToVisitedAttractions(park);
+        assertEquals(1, visitor.getVisitedAttractionsCount());
     }
 }
