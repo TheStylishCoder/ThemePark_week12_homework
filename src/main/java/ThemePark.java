@@ -26,6 +26,10 @@ public class ThemePark {
         return stalls.size();
     }
 
+    public void addStall(Stall stall){
+        this.stalls.add(stall);
+    }
+
 //    public ArrayList<IReviewed> getAllReviewed(ArrayList<Attraction> attractions, ArrayList<Stall> stalls){
 //        ArrayList<IReviewed> reviewed = new ArrayList<IReviewed>();
 //        for(Attraction attraction : attractions){

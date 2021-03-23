@@ -39,4 +39,16 @@ public class ThemeParkTest {
         assertEquals(2, themePark.getAttractionsCount());
 
     }
+
+    @Test
+    public void themeParkStallsListStartsEmpty(){
+        assertEquals(0, themePark.getStallsCount());
+    }
+
+    @Test
+    public void themeParkCanAddStalls(){
+        themePark.addStall(candyflossStall);
+        themePark.addStall(iceCreamStall);
+        assertEquals(2, themePark.getStallsCount());
+    }
 }
